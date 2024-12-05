@@ -28,13 +28,13 @@ and here is the empirical variogram (points) and fitted Matern model (line): \
 ![variogram and fitted model](fitted_variogram.png)
 
 \
-Using 5km kernel smoothing and the satellite-based variogram model make the result looks much better. Here is the formerly pointy one:\
+Using 5km kernel smoothing and the satellite-based variogram model make the result look much better. Here is the formerly pointy one:\
 ![good kriging not pointy](goodKrig_pointy.png)\
 \
 and this is the formerly over-smoothed one:\
 ![good kriging not too smooth](goodKrig_oversmooth.png)\
 \
-Moreover, with the user-supplied variogram, guarantees that the krigin process will be exactly the same for different datasets (for example, data for different time periods).
+Importantly, the user-supplied variogram guarantees that the krigin process will be exactly the same for different datasets (for example, data for different time periods).
 
 ### Files contained here
 
