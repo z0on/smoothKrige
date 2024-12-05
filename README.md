@@ -19,7 +19,12 @@ The function `smooth.krig` here solves this problems in two ways. \
 \
 First, it gives the user an option to smoothen ("regularize") the original data, using a Gaussian kernel, prior to kriging. Here we use 5km kernel (our grid resolution is 1km)\
 \
-Second, we can force the kriging process to use a user-supplied variogram, which is fitted to some reliable data from the same environment. Here we take satellite-derived measurements of temperature, turbidity, chlorophyll, and depth, compute the first principal component of their variation, and fit a Matern variogram model to its variation across the seascape: \
+Second, we can force the kriging process to use a user-supplied variogram, which is fitted to some reliable data from the same environment. Here we take satellite-derived measurements of temperature, turbidity, chlorophyll, and depth, compute the first principal component of their variation, and fit a Matern variogram model to its variation across the seascape. \
+\
+Here is the map of PC1 of the satellite data: \
+![PC1 satellite](PC1_sats.png)
+\
+and here is the empirical variogram (points) and fitted Matern model (line): \
 ![variogram and fitted model](fitted_variogram.png)
 
 \
