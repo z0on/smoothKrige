@@ -16,7 +16,7 @@ And conversely, sometimes it smoothes things way too much:
 \
 ![bad kriging: too smooth](badKrig_oversmooth.png)
 \
-The reason for both these problems is that the Krige function cannot fit a good **variogram** (dependence of measure difference on physical distance) to the data, either because the data is too noisy or otherwise weirdly shaped. \
+The reason for both these problems is that the Krige function cannot fit a good **variogram** (dependence of value difference between locations on physical distance between them) to the data, either because the data is too noisy or otherwise weirdly shaped. \
 \
 The function `smooth.krig` here solves this problems in two ways. \
 \
