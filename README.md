@@ -2,15 +2,18 @@
 ## Kriging with regularization
 
 Function `smooth.krig` was developed for kriging SERC water quality data for Florida Keys, http://serc.fiu.edu/wqmnetwork/. which are water quality measures at a bunch of specific locations: \
-![SERC stations](SERC_stations.png)
+\
+![SERC stations](SERC_stations.png) \
 \
 We want extrapolate them into a full raster grid covering the whole FL Keys. \
 \
 A typical approach to this is Krige interpolation, but it can be finicky.
 Sometimes it does't smooth things over and basically generates a map of original points on the uniform mean background: \
+\
 ![bad kriging: pointy](badKrig_pointy.png)
 \
-And conversely, sometimes it smoothes things way too much:\
+And conversely, sometimes it smoothes things way too much:
+\
 ![bad kriging: too smooth](badKrig_oversmooth.png)
 \
 The reason for both these problems is that the Krige function cannot fit a good variogram (dependence of measure difference on physical distance) to the data, either because the data is too noisy or otherwise weirdly shaped. \
