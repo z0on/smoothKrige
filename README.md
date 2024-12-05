@@ -24,20 +24,20 @@ First, it gives the user an option to **smoothen** ("regularize") the original d
 \
 Second, we can force the kriging process to **use a user-supplied variogram**, which is fitted to some reliable data from the same environment. Here we take satellite-derived measurements of temperature, turbidity, chlorophyll, and depth, compute the first principal component of their variation, and fit a Matern variogram model to its variation across the seascape. \
 \
-Here is the map of PC1 of the satellite data: \
+Here is the map of PC1 of the satellite data, which explains nearly 70% of total variation: \
 ![PC1 satellite](PC1_sats.png)
 \
 and here is the empirical variogram (points) and fitted Matern model (line): \
 ![variogram and fitted model](fitted_variogram.png)
 
 \
-Using 5km kernel smoothing and the satellite-based variogram model make the result look much better. Here is the formerly pointy one:\
+Using 5km kernel smoothing and the satellite-based variogram model make the kriging result look much better. Here is the formerly pointy one:\
 ![good kriging not pointy](goodKrig_pointy.png)\
 \
 and this is the formerly over-smoothed one:\
 ![good kriging not too smooth](goodKrig_oversmooth.png)\
 \
-Importantly, the user-supplied variogram guarantees that the krigin process will be exactly the same for different datasets (for example, data for different time periods).
+Importantly, the user-supplied variogram guarantees that the kriging process will be exactly the same for different datasets (for example, data for different time periods).
 
 ### Files contained here
 
