@@ -42,7 +42,7 @@ Importantly, the user-supplied variogram guarantees that the krigin process will
 ### Files contained here
 
 - `smooth.krig.R` : the main R function for regularized kriging
-- `smooth.krig.test.R` : R script to demonstrate how it works, with some accessory code (to form a spatial polygon by clicking on a map, and to fit a fixed variogram model).
+- `smooth.krig.test.R` : R script to demonstrate how it works, with some accessory code in appedices (to form a spatial polygon by clicking on a map, and to fit a fixed variogram model).
 - several `.RData` bundles containing the data used by `smooth.krig.test.R`.
 - `variogram_model_satPC1.RData` : variogram model for Florida Keys environment, based on satellite data. I would assume it would be applicable to any Caribbean reef environment. The code to generate such a model is "appendix 2" in `smooth.krig.test.R`.
   
