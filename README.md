@@ -28,7 +28,7 @@ and here is the empirical variogram (points) and fitted Matern model (line): \
 ![variogram and fitted model](fitted_variogram.png)
 
 \
-The result certainly looks much better than the original. Here is the formerly pointy one:\
+Using 5km kernel smoothing and the satellite-based variogram model make the result looks much better. Here is the formerly pointy one:\
 ![good kriging not pointy](goodKrig_pointy.png)\
 \
 and this is the formerly over-smoothed one:\
