@@ -1,0 +1,2 @@
+# smoothKrige
+Kriging with regularization
