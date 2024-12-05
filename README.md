@@ -18,12 +18,14 @@ The reason for both these problems is that the Krige function cannot fit a good 
 The function `smooth.krig` here solves this problems in two ways.\
 \
 First, it gives the user an option to smoothen ("regularize") the original data, using a Gaussian kernel, prior to kriging. Here we use 5km kernel (our grid resolution is 1km)\
+\
 Second, we can force the kriging process to use a user-supplied variogram, which is fitted to some reliable data from the same environment. Here we take satellite-derived measurements of temperature, turbidity, chlorophyll, and depth, compute the first principal component of their variation, and fit a Matern variogram model to its variation across the seascape: \
 ![variogram and fitted model](fitted_variogram.png)
 
 \
-The result looks much better than the original:\
-![good kriging not pointy](goodKrig_pointy.png)
+The result certainly looks much better than the original. Here is the formerly pointy one:\
+![good kriging not pointy](goodKrig_pointy.png)\
+\and this is the formerly over-smoothed one:\
 ![good kriging not too smooth](goodKrig_oversmooth.png)
 \
 Moreover, with the user-supplied variogram, guarantees that the krigin process will be exactly the same for different datasets (for example, data for different time periods).\
