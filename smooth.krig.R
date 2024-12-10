@@ -9,7 +9,7 @@
 #' @param polygon dataframe of points (lon, lat) defining a polygon. The first row must be the same as the last row.
 #' @param variogram_model fixed variogram model, made with variogram() and fit.variogram(). If omitted, will be fit on the fly.
 #' @param grid.res grid resolution, in meters. 
-#' @param smooth.range in meters
+#' @param smooth.range in meters. Set to some small value to turn off smoothing.
 #' @param utm.zone UTM zone number
 #' @param verbose whether to plot original data, smoothed data, and kriging result
 #' @return dataframe of lat-lon (grid within polygon), and projected variable
@@ -18,7 +18,7 @@
 #' @import raster
 #' @export
 smooth.krig=function(latlon,dset,V,polygon,variogram_model=NULL,grid.res=1000,smooth.range=5000,utm.zone=17,verbose=TRUE){
-  latlon=ll;dset=dataset;V="NOX.B_range";variogram_model=variogram_model;polygon=keys.polygon;grid.res=1000;smooth.range=1;utm.zone=17;verbose=TRUE
+#  latlon=ll;dset=dataset;V="NOX.B_range";variogram_model=variogram_model;polygon=keys.polygon;grid.res=1000;smooth.range=1;utm.zone=17;verbose=TRUE
   require(spatstat)
   require(automap)
   require(sp)
