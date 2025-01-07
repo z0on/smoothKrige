@@ -81,10 +81,10 @@ smooth.krig=function(latlon,dset,V,polygon,variogram_model=NULL,grid.res=1000,sm
   data_utm_sf <- st_as_sf(data_utm)
 #  if (verbose==TRUE) { plot(data_utm_sf["z"], pch=16,main="smoothed data")}
   if(is.null(variogram_model)) { 
-    kriging_result <- autoKrige(z ~ 1, input_data = data_utm, new_data = grid)
+    kriging_result <- autoKrige(z ~ x+y, input_data = data_utm, new_data = grid)
     kriging_raster <- raster(kriging_result$krige_output)
   } else {
-    kriging_result <- krige(z ~ 1, locations = data_utm, newdata = grid, model = variogram_model)
+    kriging_result <- krige(z ~ x+y, locations = data_utm, newdata = grid, model = variogram_model)
     kriging_raster <- raster(kriging_result)
   }
   
