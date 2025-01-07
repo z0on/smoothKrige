@@ -1,7 +1,7 @@
 
 #' Regularized kriging, optionally with externally supplied variogram
 #'
-#' Smoothes data using Gausssian kernel, then performs Krige interpolation
+#' Smoothes data using Gausssian kernel, then performs universal Krige interpolation
 #'
 #' @param latlon dataframe of latitutde and longitude for datapoints. Must have columns named "lon" and "lat".
 #' @param dset dataframe of environmental variables
